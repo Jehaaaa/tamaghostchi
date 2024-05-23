@@ -9,18 +9,26 @@
 /* Begin PBXBuildFile section */
 		950150132BFBD0A2003668BD /* TamaghostchiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950150122BFBD0A2003668BD /* TamaghostchiApp.swift */; };
 		950150152BFBD0A2003668BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950150142BFBD0A2003668BD /* ContentView.swift */; };
-		950150172BFBD0A2003668BD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950150162BFBD0A2003668BD /* Item.swift */; };
 		950150192BFBD0A2003668BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 950150182BFBD0A2003668BD /* Assets.xcassets */; };
 		9501501C2BFBD0A2003668BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9501501B2BFBD0A2003668BD /* Preview Assets.xcassets */; };
+		950150232BFBD0EE003668BD /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950150222BFBD0EE003668BD /* ARViewController.swift */; };
+		950150252BFBD10E003668BD /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950150242BFBD10E003668BD /* FoodView.swift */; };
+		950150272BFBD12E003668BD /* Baby.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 950150262BFBD12E003668BD /* Baby.usdz */; };
+		951277E72BFE5C7600A45342 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951277E62BFE5C7600A45342 /* Helper.swift */; };
+		955DC3912BFD236500BCC5A7 /* CoreMotionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955DC3902BFD236500BCC5A7 /* CoreMotionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9501500F2BFBD0A2003668BD /* Tamaghostchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tamaghostchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		950150122BFBD0A2003668BD /* TamaghostchiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaghostchiApp.swift; sourceTree = "<group>"; };
 		950150142BFBD0A2003668BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		950150162BFBD0A2003668BD /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		950150182BFBD0A2003668BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9501501B2BFBD0A2003668BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		950150222BFBD0EE003668BD /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		950150242BFBD10E003668BD /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
+		950150262BFBD12E003668BD /* Baby.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Baby.usdz; sourceTree = "<group>"; };
+		951277E62BFE5C7600A45342 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		955DC3902BFD236500BCC5A7 /* CoreMotionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +61,13 @@
 		950150112BFBD0A2003668BD /* Tamaghostchi */ = {
 			isa = PBXGroup;
 			children = (
+				950150262BFBD12E003668BD /* Baby.usdz */,
 				950150122BFBD0A2003668BD /* TamaghostchiApp.swift */,
 				950150142BFBD0A2003668BD /* ContentView.swift */,
-				950150162BFBD0A2003668BD /* Item.swift */,
+				951277E62BFE5C7600A45342 /* Helper.swift */,
+				950150242BFBD10E003668BD /* FoodView.swift */,
+				950150222BFBD0EE003668BD /* ARViewController.swift */,
+				955DC3902BFD236500BCC5A7 /* CoreMotionController.swift */,
 				950150182BFBD0A2003668BD /* Assets.xcassets */,
 				9501501A2BFBD0A2003668BD /* Preview Content */,
 			);
@@ -129,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9501501C2BFBD0A2003668BD /* Preview Assets.xcassets in Resources */,
+				950150272BFBD12E003668BD /* Baby.usdz in Resources */,
 				950150192BFBD0A2003668BD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,9 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				955DC3912BFD236500BCC5A7 /* CoreMotionController.swift in Sources */,
 				950150152BFBD0A2003668BD /* ContentView.swift in Sources */,
-				950150172BFBD0A2003668BD /* Item.swift in Sources */,
+				950150252BFBD10E003668BD /* FoodView.swift in Sources */,
 				950150132BFBD0A2003668BD /* TamaghostchiApp.swift in Sources */,
+				950150232BFBD0EE003668BD /* ARViewController.swift in Sources */,
+				951277E72BFE5C7600A45342 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,11 +295,13 @@
 				DEVELOPMENT_TEAM = X2J87GT3T5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Izin Kameranya kaka";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,11 +326,13 @@
 				DEVELOPMENT_TEAM = X2J87GT3T5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Izin Kameranya kaka";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

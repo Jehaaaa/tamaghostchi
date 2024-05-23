@@ -1,61 +1,91 @@
 //
 //  ContentView.swift
-//  Tamaghostchi
+//  Tamaghostchi3
 //
-//  Created by Vincent Junior Halim on 21/05/24.
+//  Created by Vincent Junior Halim on 17/05/24.
 //
 
 import SwiftUI
-import SwiftData
+import CoreMotion
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    let defaults = UserDefaults.standard
+    @StateObject private var motionManager = CoreMotionController()
+    @State var hungerValue:Double =  0.2
+    @State var funValue:Double =  0.2
+    @State var coinValue: Double = 0
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+        ZStack {
+            
+            VStack {
+                Status(hungerValue: $hungerValue, funValue: $funValue, coinValue: $coinValue)
+                ARViewContainer(funValue: $funValue, coinValue: $coinValue, hungerValue: $hungerValue)
+            }
+            .onAppear(){
+                if(defaults.value(forKey: "hunger") != nil){
+                    hungerValue = getHungerValue()
+                    funValue = getFunValue()
+                    coinValue = getCoinValue()
+                }
+                DispatchQueue.global().async {
+                    
+                    while true{
+                        if(isTimanging == true){
+                            funValue += 0.1
+                            isTimanging = false
+                        }
+                        saveStatus(hungerValue: hungerValue, funValue: funValue, coinValue: coinValue)
                     }
                 }
-                .onDelete(perform: deleteItems)
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
+            
+            Color(red: 0.2196, green: 0.69, blue: 0.0,opacity: 0.6)
+                .blendMode(.overlay)
+                .allowsHitTesting(false)
+                .overlay(FoodView(hungerValue: $hungerValue),alignment: .bottom)
+            
         }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
+        .ignoresSafeArea(.all)
+        
+        
+        
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+}
+
+struct Status: View {
+    @Binding var hungerValue: Double
+    @Binding var funValue: Double
+    @Binding var coinValue: Double
+    var body: some View {
+        HStack{
+            ProgressView(value: hungerValue){
+                Image(systemName: "fork.knife")
+            }.tint(getStatusBarColor(value: hungerValue))
+            
+            VStack{
+                Image(systemName:"bitcoinsign.circle.fill")
+                Text("\(String(format: "₿ %0.02f", coinValue))")
+            }.padding()
+            //
+            ProgressView(value: funValue){
+                Image(systemName: "face.smiling.inverse")
+            }.tint(getStatusBarColor(value: funValue))
+        }.padding()
+    }
+    
+    func getStatusBarColor(value:Double)->Color{
+        if(value >= 0.6){
+            return Color(.green)
+        }
+        else if(value >= 0.4 && value<0.6){
+            return Color(.yellow)
+        }
+        else {
+            return Color(.red)
+        }
+    }
 }
