@@ -19,7 +19,7 @@ struct ARViewContainer: UIViewRepresentable {
         //        arView.environment.sceneUnderstanding.options = .occlusion
         arView.environment.background = .cameraFeed(exposureCompensation: 0.3)
         
-        arView.enableTapGesture()
+//        arView.enableTapGesture()
         
         let config = ARWorldTrackingConfiguration()
         config.environmentTexturing = .automatic
@@ -33,7 +33,7 @@ struct ARViewContainer: UIViewRepresentable {
         
         arView.scene.anchors.append(anchor)
         
-//        modelMove(model: model)
+        modelMove(model: model)
         
         return arView
     }
@@ -45,11 +45,17 @@ struct ARViewContainer: UIViewRepresentable {
     func modelMove(model: Entity){
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             model.transform.translation = SIMD3(x: Float.random(in: -5 ... 5), y: 0, z: Float.random(in: -5 ... 5))
-            funValue -= 0.1
-            coinValue += 1
-            hungerValue -= 0.1
-            if (funValue-0.1 >= 0 && hungerValue-0.1 >= 0){
+            funValue -= 0.05
+            coinValue += 0.1
+            hungerValue -= 0.05
+            if (funValue-0.05 >= 0 && hungerValue-0.05 >= 0){
                 modelMove(model:model)
+            }
+            else {
+                funValue = 0.2
+                coinValue = 0
+                hungerValue = 0.2
+                exit(0)
             }
             
         }
@@ -71,9 +77,6 @@ extension ARView{
         let result = self.scene.raycast(origin: rayResult.origin, direction: rayResult.direction)
         
         if (result.first != nil){
-            isTapped.toggle()
-            isMove.toggle()
-            print("DEBUG: TAPPED \(isMove)")
             print("\(type(of:result.first))")
             print("\(String(describing: result.first))")
         }

@@ -8,6 +8,9 @@
 import SwiftUI
 import CoreMotion
 
+import CoreImage
+import CoreImage.CIFilterBuiltins
+
 struct ContentView: View {
     let defaults = UserDefaults.standard
     @StateObject private var motionManager = CoreMotionController()
@@ -17,10 +20,10 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             
-            VStack {
-                Status(hungerValue: $hungerValue, funValue: $funValue, coinValue: $coinValue)
+//            VStack{
                 ARViewContainer(funValue: $funValue, coinValue: $coinValue, hungerValue: $hungerValue)
-            }
+                .overlay(Status(hungerValue: $hungerValue, funValue: $funValue, coinValue: $coinValue),alignment: .top)
+//            }
             .onAppear(){
                 if(defaults.value(forKey: "hunger") != nil){
                     hungerValue = getHungerValue()
@@ -31,7 +34,10 @@ struct ContentView: View {
                     
                     while true{
                         if(isTimanging == true){
-                            funValue += 0.1
+                            if(funValue<1){
+                                funValue += 0.1
+                                
+                            }
                             isTimanging = false
                         }
                         saveStatus(hungerValue: hungerValue, funValue: funValue, coinValue: coinValue)
@@ -39,7 +45,7 @@ struct ContentView: View {
                 }
             }
             
-            Color(red: 0.2196, green: 0.69, blue: 0.0,opacity: 0.6)
+            Color(red: 0.2196, green: 0.69, blue: 0.0,opacity: 0.3)
                 .blendMode(.overlay)
                 .allowsHitTesting(false)
                 .overlay(FoodView(hungerValue: $hungerValue),alignment: .bottom)
@@ -62,30 +68,35 @@ struct Status: View {
     @Binding var coinValue: Double
     var body: some View {
         HStack{
-            ProgressView(value: hungerValue){
-                Image(systemName: "fork.knife")
-            }.tint(getStatusBarColor(value: hungerValue))
+            HStack {
+                Image(systemName: "fork.knife").colorInvert()
+                ProgressView(value: hungerValue)
+                    .scaleEffect(y:5)
+                    .frame(width: 300)
+                    .tint(.white)
+            }
+            .frame(width: 400)
+            .padding()
             
-            VStack{
-                Image(systemName:"bitcoinsign.circle.fill")
-                Text("\(String(format: "₿ %0.02f", coinValue))")
-            }.padding()
-            //
-            ProgressView(value: funValue){
-                Image(systemName: "face.smiling.inverse")
-            }.tint(getStatusBarColor(value: funValue))
-        }.padding()
-    }
-    
-    func getStatusBarColor(value:Double)->Color{
-        if(value >= 0.6){
-            return Color(.green)
-        }
-        else if(value >= 0.4 && value<0.6){
-            return Color(.yellow)
-        }
-        else {
-            return Color(.red)
-        }
+            HStack {
+                Image(systemName: "face.smiling.inverse").colorInvert()
+                ProgressView(value: funValue)
+                    .scaleEffect(y:5)
+                    .frame(width: 300)
+                    .tint(.white)
+                    
+            }.frame(width: 400)
+            .padding()
+                
+            HStack{
+                Image(systemName:"bitcoinsign.circle.fill").colorInvert()
+                Text("\(String(format: "%.02f", coinValue))")
+                    .foregroundStyle(.white)
+            }.frame(width: 200)
+            .padding()
+            
+        }.frame(width: 1000,height: 75)
+        
+        
     }
 }

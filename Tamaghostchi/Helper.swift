@@ -31,6 +31,4 @@ func getCoinValue()->Double{
     return defaults.double(forKey: "coin")
 }
 
-var isMove = true
-var isTapped = true
 var isTimanging = false

@@ -13,24 +13,25 @@ import RealityKit
 struct FoodView: View {
     @Binding var hungerValue:Double
     var body: some View {
-        HStack{
-            Food(hungerValue: $hungerValue, food: "birthday.cake.fill")
-            Spacer()
-            Food(hungerValue: $hungerValue, food: "birthday.cake.fill")
-            Spacer()
-            Food(hungerValue: $hungerValue, food: "birthday.cake.fill")
-        }.padding()
+        HStack(alignment:.center){
+            Food(hungerValue: $hungerValue, food: .CURUT)
+            Food(hungerValue: $hungerValue, food: .BUNGA)
+            Food(hungerValue: $hungerValue, food: .SAJEN)
+            Food(hungerValue: $hungerValue, food: .DUPA)
+            Food(hungerValue: $hungerValue, food: .DARAH)
+        }
+        .frame(width: 1210,height: 110)
         .background(Color(red: 1, green: 1, blue: 1,opacity: 0.3))
     }
 }
 
 struct Food: View {
     @Binding var hungerValue:Double
-    @State var food: String
+    @State var food: UIImage
     @State var isDragging = false
     @State var position = CGSize.zero
     var body: some View {
-        Image(systemName:food)
+        Image(uiImage: food)
             .resizable()
             .scaledToFit()
             .frame(width: 200,height: 100)
@@ -44,7 +45,9 @@ struct Food: View {
                     .onEnded({ value in
                         position = .zero
                         isDragging = false
-                        hungerValue += 0.2
+                        if(hungerValue <= 1.0){
+                            hungerValue += 0.1
+                        }
                     })
                 
             )
