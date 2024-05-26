@@ -46,8 +46,9 @@ struct ARViewContainer: UIViewRepresentable {
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             model.transform.translation = SIMD3(x: Float.random(in: -5 ... 5), y: 0, z: Float.random(in: -5 ... 5))
             funValue -= 0.05
-            coinValue += 0.1
+            coinValue += Double.random(in: 0...0.2)
             hungerValue -= 0.05
+            SoundManager.instance.playSound(sound: SoundOptions.coin)
             if (funValue-0.05 >= 0 && hungerValue-0.05 >= 0){
                 modelMove(model:model)
             }

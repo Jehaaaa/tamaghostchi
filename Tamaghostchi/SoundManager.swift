@@ -47,4 +47,5 @@ enum SoundOptions: String, CaseIterable {
     case yay
     case eating
     case jumpscare
+    case coin
 }
