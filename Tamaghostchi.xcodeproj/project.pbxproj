@@ -16,6 +16,10 @@
 		950150272BFBD12E003668BD /* Baby.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 950150262BFBD12E003668BD /* Baby.usdz */; };
 		951277E72BFE5C7600A45342 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951277E62BFE5C7600A45342 /* Helper.swift */; };
 		955DC3912BFD236500BCC5A7 /* CoreMotionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955DC3902BFD236500BCC5A7 /* CoreMotionController.swift */; };
+		95EDA5532C037BF500C0A5D6 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EDA5522C037BF500C0A5D6 /* Status.swift */; };
+		95EDA5572C037D3700C0A5D6 /* jumpscare.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 95EDA5542C037D3700C0A5D6 /* jumpscare.mp3 */; };
+		95EDA5592C037D3700C0A5D6 /* eating.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 95EDA5562C037D3700C0A5D6 /* eating.mp3 */; };
+		95EDA55B2C03800E00C0A5D6 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EDA55A2C03800E00C0A5D6 /* SoundManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,11 @@
 		950150262BFBD12E003668BD /* Baby.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Baby.usdz; sourceTree = "<group>"; };
 		951277E62BFE5C7600A45342 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		955DC3902BFD236500BCC5A7 /* CoreMotionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotionController.swift; sourceTree = "<group>"; };
+		95EDA5522C037BF500C0A5D6 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		95EDA5542C037D3700C0A5D6 /* jumpscare.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jumpscare.mp3; sourceTree = "<group>"; };
+		95EDA5562C037D3700C0A5D6 /* eating.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = eating.mp3; sourceTree = "<group>"; };
+		95EDA55A2C03800E00C0A5D6 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		95EDA5612C0392AC00C0A5D6 /* timanging.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = timanging.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +70,11 @@
 		950150112BFBD0A2003668BD /* Tamaghostchi */ = {
 			isa = PBXGroup;
 			children = (
+				95EDA5602C03929E00C0A5D6 /* SoundEffect */,
 				950150262BFBD12E003668BD /* Baby.usdz */,
 				950150122BFBD0A2003668BD /* TamaghostchiApp.swift */,
+				95EDA55A2C03800E00C0A5D6 /* SoundManager.swift */,
+				95EDA5522C037BF500C0A5D6 /* Status.swift */,
 				950150142BFBD0A2003668BD /* ContentView.swift */,
 				951277E62BFE5C7600A45342 /* Helper.swift */,
 				950150242BFBD10E003668BD /* FoodView.swift */,
@@ -80,6 +92,16 @@
 				9501501B2BFBD0A2003668BD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		95EDA5602C03929E00C0A5D6 /* SoundEffect */ = {
+			isa = PBXGroup;
+			children = (
+				95EDA5562C037D3700C0A5D6 /* eating.mp3 */,
+				95EDA5542C037D3700C0A5D6 /* jumpscare.mp3 */,
+				95EDA5612C0392AC00C0A5D6 /* timanging.mp3 */,
+			);
+			path = SoundEffect;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +163,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9501501C2BFBD0A2003668BD /* Preview Assets.xcassets in Resources */,
+				95EDA5572C037D3700C0A5D6 /* jumpscare.mp3 in Resources */,
 				950150272BFBD12E003668BD /* Baby.usdz in Resources */,
+				95EDA5592C037D3700C0A5D6 /* eating.mp3 in Resources */,
 				950150192BFBD0A2003668BD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,7 +178,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				955DC3912BFD236500BCC5A7 /* CoreMotionController.swift in Sources */,
+				95EDA55B2C03800E00C0A5D6 /* SoundManager.swift in Sources */,
 				950150152BFBD0A2003668BD /* ContentView.swift in Sources */,
+				95EDA5532C037BF500C0A5D6 /* Status.swift in Sources */,
 				950150252BFBD10E003668BD /* FoodView.swift in Sources */,
 				950150132BFBD0A2003668BD /* TamaghostchiApp.swift in Sources */,
 				950150232BFBD0EE003668BD /* ARViewController.swift in Sources */,

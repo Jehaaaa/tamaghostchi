@@ -46,6 +46,7 @@ struct Food: View {
                         position = .zero
                         isDragging = false
                         if(hungerValue <= 1.0){
+                            SoundManager.instance.playSound(sound: SoundOptions.eating)
                             hungerValue += 0.1
                         }
                     })

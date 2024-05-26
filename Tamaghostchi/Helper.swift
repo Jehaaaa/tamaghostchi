@@ -8,6 +8,8 @@
 import Foundation
 import ARKit
 import RealityKit
+import AVFoundation
+
 
 func saveStatus(hungerValue:Double, funValue:Double, coinValue:Double){
     let defaults = UserDefaults.standard
@@ -32,3 +34,7 @@ func getCoinValue()->Double{
 }
 
 var isTimanging = false
+
+var isJumpscare = false
+
+

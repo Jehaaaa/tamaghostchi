@@ -51,36 +51,8 @@ struct ARViewContainer: UIViewRepresentable {
             if (funValue-0.05 >= 0 && hungerValue-0.05 >= 0){
                 modelMove(model:model)
             }
-            else {
-                funValue = 0.2
-                coinValue = 0
-                hungerValue = 0.2
-                exit(0)
-            }
-            
         }
     }
 }
 
-extension ARView{
-    
-    func enableTapGesture(){
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(recognizer: )))
-        self.addGestureRecognizer(tapGestureRecognizer)
-    }
-    @objc func handleTap(recognizer: UITapGestureRecognizer){
-        
-        let tapLocation = recognizer.location(in: self)
-        
-        guard let rayResult = self.ray(through: tapLocation) else{ return }
-        
-        let result = self.scene.raycast(origin: rayResult.origin, direction: rayResult.direction)
-        
-        if (result.first != nil){
-            print("\(type(of:result.first))")
-            print("\(String(describing: result.first))")
-        }
-        
-    }
-    
-}
+
