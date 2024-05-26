@@ -44,7 +44,7 @@ class SoundManager {
 }
 
 enum SoundOptions: String, CaseIterable {
-    case timanging
+    case yay
     case eating
     case jumpscare
 }

@@ -35,8 +35,9 @@ struct ContentView: View {
                                 if(isTimanging == true){
                                     if(funValue<1){
                                         funValue += 0.1
+                                        SoundManager.instance.playSound(sound: SoundOptions.yay)
                                     }
-                                    SoundManager.instance.playSound(sound: SoundOptions.timanging)
+                                    
                                     isTimanging = false
                                 }
                                 saveStatus(hungerValue: hungerValue, funValue: funValue, coinValue: coinValue)

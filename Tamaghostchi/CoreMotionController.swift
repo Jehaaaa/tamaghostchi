@@ -42,7 +42,7 @@ class CoreMotionController: ObservableObject {
         let deltaX = abs(current.x - previous.x)
         let deltaY = abs(current.y - previous.y)
         if deltaX > threshold && deltaY > 0.1 {
-            print("DEBUG : FUN++")
+            
             isTimanging = true
         }
     }

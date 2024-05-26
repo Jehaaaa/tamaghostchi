@@ -20,6 +20,7 @@
 		95EDA5572C037D3700C0A5D6 /* jumpscare.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 95EDA5542C037D3700C0A5D6 /* jumpscare.mp3 */; };
 		95EDA5592C037D3700C0A5D6 /* eating.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 95EDA5562C037D3700C0A5D6 /* eating.mp3 */; };
 		95EDA55B2C03800E00C0A5D6 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EDA55A2C03800E00C0A5D6 /* SoundManager.swift */; };
+		95EDA5652C0397EF00C0A5D6 /* yay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 95EDA5642C0397EF00C0A5D6 /* yay.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +38,7 @@
 		95EDA5542C037D3700C0A5D6 /* jumpscare.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jumpscare.mp3; sourceTree = "<group>"; };
 		95EDA5562C037D3700C0A5D6 /* eating.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = eating.mp3; sourceTree = "<group>"; };
 		95EDA55A2C03800E00C0A5D6 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
-		95EDA5612C0392AC00C0A5D6 /* timanging.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = timanging.mp3; sourceTree = "<group>"; };
+		95EDA5642C0397EF00C0A5D6 /* yay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yay.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +100,7 @@
 			children = (
 				95EDA5562C037D3700C0A5D6 /* eating.mp3 */,
 				95EDA5542C037D3700C0A5D6 /* jumpscare.mp3 */,
-				95EDA5612C0392AC00C0A5D6 /* timanging.mp3 */,
+				95EDA5642C0397EF00C0A5D6 /* yay.mp3 */,
 			);
 			path = SoundEffect;
 			sourceTree = "<group>";
@@ -162,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95EDA5652C0397EF00C0A5D6 /* yay.mp3 in Resources */,
 				9501501C2BFBD0A2003668BD /* Preview Assets.xcassets in Resources */,
 				95EDA5572C037D3700C0A5D6 /* jumpscare.mp3 in Resources */,
 				950150272BFBD12E003668BD /* Baby.usdz in Resources */,
