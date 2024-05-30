@@ -8,7 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct Status: View {
+// TODO: ganti nama jadi StatusView
+struct StatusView: View {
     @Binding var hungerValue: Double
     @Binding var funValue: Double
     @Binding var coinValue: Double

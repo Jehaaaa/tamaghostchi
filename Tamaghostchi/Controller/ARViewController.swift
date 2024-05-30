@@ -16,10 +16,7 @@ struct ARViewContainer: UIViewRepresentable {
     @Binding var hungerValue: Double
     func makeUIView(context: Context) -> ARView {
         let arView = ARView(frame: .zero)
-        //        arView.environment.sceneUnderstanding.options = .occlusion
         arView.environment.background = .cameraFeed(exposureCompensation: 0.3)
-        
-//        arView.enableTapGesture()
         
         let config = ARWorldTrackingConfiguration()
         config.environmentTexturing = .automatic
@@ -48,7 +45,7 @@ struct ARViewContainer: UIViewRepresentable {
             funValue -= 0.05
             coinValue += Double.random(in: 0...0.2)
             hungerValue -= 0.05
-            SoundManager.instance.playSound(sound: SoundOptions.coin)
+            SoundController.instance.playSound(sound: SoundOptions.coin)
             if (funValue-0.05 >= 0 && hungerValue-0.05 >= 0){
                 modelMove(model:model)
             }

@@ -32,7 +32,7 @@ func getCoinValue()->Double{
     let defaults = UserDefaults.standard
     return defaults.double(forKey: "coin")
 }
-
+// TODO: pindahin ke tempat lain biar gk jadi global variable, pindahin ke atas page bg
 var isTimanging = false
 
 var isJumpscare = false

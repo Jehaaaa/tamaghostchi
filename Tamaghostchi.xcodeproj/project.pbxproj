@@ -14,12 +14,12 @@
 		950150232BFBD0EE003668BD /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950150222BFBD0EE003668BD /* ARViewController.swift */; };
 		950150252BFBD10E003668BD /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950150242BFBD10E003668BD /* FoodView.swift */; };
 		950150272BFBD12E003668BD /* Baby.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 950150262BFBD12E003668BD /* Baby.usdz */; };
-		951277E72BFE5C7600A45342 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951277E62BFE5C7600A45342 /* Helper.swift */; };
+		951277E72BFE5C7600A45342 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951277E62BFE5C7600A45342 /* Utils.swift */; };
 		955DC3912BFD236500BCC5A7 /* CoreMotionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955DC3902BFD236500BCC5A7 /* CoreMotionController.swift */; };
-		95EDA5532C037BF500C0A5D6 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EDA5522C037BF500C0A5D6 /* Status.swift */; };
+		95EDA5532C037BF500C0A5D6 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EDA5522C037BF500C0A5D6 /* StatusView.swift */; };
 		95EDA5572C037D3700C0A5D6 /* jumpscare.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 95EDA5542C037D3700C0A5D6 /* jumpscare.mp3 */; };
 		95EDA5592C037D3700C0A5D6 /* eating.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 95EDA5562C037D3700C0A5D6 /* eating.mp3 */; };
-		95EDA55B2C03800E00C0A5D6 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EDA55A2C03800E00C0A5D6 /* SoundManager.swift */; };
+		95EDA55B2C03800E00C0A5D6 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EDA55A2C03800E00C0A5D6 /* SoundController.swift */; };
 		95EDA5652C0397EF00C0A5D6 /* yay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 95EDA5642C0397EF00C0A5D6 /* yay.mp3 */; };
 		95EDA5672C03991C00C0A5D6 /* coin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 95EDA5662C03991C00C0A5D6 /* coin.mp3 */; };
 /* End PBXBuildFile section */
@@ -33,12 +33,12 @@
 		950150222BFBD0EE003668BD /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		950150242BFBD10E003668BD /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		950150262BFBD12E003668BD /* Baby.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Baby.usdz; sourceTree = "<group>"; };
-		951277E62BFE5C7600A45342 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		951277E62BFE5C7600A45342 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		955DC3902BFD236500BCC5A7 /* CoreMotionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotionController.swift; sourceTree = "<group>"; };
-		95EDA5522C037BF500C0A5D6 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		95EDA5522C037BF500C0A5D6 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		95EDA5542C037D3700C0A5D6 /* jumpscare.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jumpscare.mp3; sourceTree = "<group>"; };
 		95EDA5562C037D3700C0A5D6 /* eating.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = eating.mp3; sourceTree = "<group>"; };
-		95EDA55A2C03800E00C0A5D6 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		95EDA55A2C03800E00C0A5D6 /* SoundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
 		95EDA5642C0397EF00C0A5D6 /* yay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yay.mp3; sourceTree = "<group>"; };
 		95EDA5662C03991C00C0A5D6 /* coin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coin.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,16 +73,12 @@
 		950150112BFBD0A2003668BD /* Tamaghostchi */ = {
 			isa = PBXGroup;
 			children = (
-				95EDA5602C03929E00C0A5D6 /* SoundEffect */,
-				950150262BFBD12E003668BD /* Baby.usdz */,
 				950150122BFBD0A2003668BD /* TamaghostchiApp.swift */,
-				95EDA55A2C03800E00C0A5D6 /* SoundManager.swift */,
-				95EDA5522C037BF500C0A5D6 /* Status.swift */,
-				950150142BFBD0A2003668BD /* ContentView.swift */,
-				951277E62BFE5C7600A45342 /* Helper.swift */,
-				950150242BFBD10E003668BD /* FoodView.swift */,
-				950150222BFBD0EE003668BD /* ARViewController.swift */,
-				955DC3902BFD236500BCC5A7 /* CoreMotionController.swift */,
+				9570BDF82C081F8D005D8BD5 /* 3D Model */,
+				9570BDF72C081F68005D8BD5 /* Utils */,
+				9570BDF62C081F48005D8BD5 /* Controller */,
+				9570BDF52C081F17005D8BD5 /* View */,
+				95EDA5602C03929E00C0A5D6 /* SoundEffect */,
 				950150182BFBD0A2003668BD /* Assets.xcassets */,
 				9501501A2BFBD0A2003668BD /* Preview Content */,
 			);
@@ -95,6 +91,42 @@
 				9501501B2BFBD0A2003668BD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9570BDF52C081F17005D8BD5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				950150142BFBD0A2003668BD /* ContentView.swift */,
+				950150242BFBD10E003668BD /* FoodView.swift */,
+				95EDA5522C037BF500C0A5D6 /* StatusView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9570BDF62C081F48005D8BD5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				95EDA55A2C03800E00C0A5D6 /* SoundController.swift */,
+				950150222BFBD0EE003668BD /* ARViewController.swift */,
+				955DC3902BFD236500BCC5A7 /* CoreMotionController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9570BDF72C081F68005D8BD5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				951277E62BFE5C7600A45342 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9570BDF82C081F8D005D8BD5 /* 3D Model */ = {
+			isa = PBXGroup;
+			children = (
+				950150262BFBD12E003668BD /* Baby.usdz */,
+			);
+			path = "3D Model";
 			sourceTree = "<group>";
 		};
 		95EDA5602C03929E00C0A5D6 /* SoundEffect */ = {
@@ -184,13 +216,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				955DC3912BFD236500BCC5A7 /* CoreMotionController.swift in Sources */,
-				95EDA55B2C03800E00C0A5D6 /* SoundManager.swift in Sources */,
+				95EDA55B2C03800E00C0A5D6 /* SoundController.swift in Sources */,
 				950150152BFBD0A2003668BD /* ContentView.swift in Sources */,
-				95EDA5532C037BF500C0A5D6 /* Status.swift in Sources */,
+				95EDA5532C037BF500C0A5D6 /* StatusView.swift in Sources */,
 				950150252BFBD10E003668BD /* FoodView.swift in Sources */,
 				950150132BFBD0A2003668BD /* TamaghostchiApp.swift in Sources */,
 				950150232BFBD0EE003668BD /* ARViewController.swift in Sources */,
-				951277E72BFE5C7600A45342 /* Helper.swift in Sources */,
+				951277E72BFE5C7600A45342 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,8 +363,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -362,8 +394,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -9,7 +9,7 @@ import SwiftUI
 import CoreMotion
 import CoreImage
 import CoreImage.CIFilterBuiltins
-
+// TODO: pecah lagi, biar ContentView kosong
 struct ContentView: View {
     let defaults = UserDefaults.standard
     @StateObject private var motionManager = CoreMotionController()
@@ -22,7 +22,7 @@ struct ContentView: View {
         
         ZStack {
                 ARViewContainer(funValue: $funValue, coinValue: $coinValue, hungerValue: $hungerValue)
-                    .overlay(Status(hungerValue: $hungerValue, funValue: $funValue, coinValue: $coinValue),alignment: .top)
+                    .overlay(StatusView(hungerValue: $hungerValue, funValue: $funValue, coinValue: $coinValue),alignment: .top)
                     .onAppear(){
                         if(defaults.value(forKey: "hunger") != nil){
                             hungerValue = getHungerValue()
@@ -30,12 +30,12 @@ struct ContentView: View {
                             coinValue = getCoinValue()
                         }
                         DispatchQueue.global().async {
-                            
+                            // TODO: bisa jadi function
                             while true{
                                 if(isTimanging == true){
                                     if(funValue<1){
                                         funValue += 0.1
-                                        SoundManager.instance.playSound(sound: SoundOptions.yay)
+                                        SoundController.instance.playSound(sound: SoundOptions.yay)
                                     }
                                     
                                     isTimanging = false
@@ -55,7 +55,7 @@ struct ContentView: View {
                     .scaledToFill()
                     .background()
                     .onAppear(){
-                        SoundManager.instance.playSound(sound: SoundOptions.jumpscare)
+                        SoundController.instance.playSound(sound: SoundOptions.jumpscare)
     
                         Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
                             showAlert = false

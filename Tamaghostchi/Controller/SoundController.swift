@@ -8,8 +8,8 @@
 import Foundation
 import AVFoundation
 
-class SoundManager {
-    static let instance = SoundManager()
+class SoundController {
+    static let instance = SoundController()
     
     private var players: [SoundOptions: AVAudioPlayer] = [:]
     private let queue = DispatchQueue(label: "com.example.SoundManagerQueue")
